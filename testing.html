@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Desplazamiento Automático</title>
+  <style>
+    /* Personalización para Chrome, Safari, y otros navegadores WebKit */
+/* Estilo de la barra de desplazamiento (scrollbar) */
+::-webkit-scrollbar {
+    width: 12px; /* Ancho de la barra de desplazamiento */
+}
+
+/* Fondo del contenedor de la barra de desplazamiento */
+::-webkit-scrollbar-track {
+    background: #f1f1f1; /* Color del track */
+
+}
+
+/* Estilo de la "perilla" que se desplaza */
+::-webkit-scrollbar-thumb {
+    background: #A134BFaf ; /* Color de la perilla */
+
+}
+
+/* Cambia el color de la perilla cuando se interactúa con ella (hover) */
+::-webkit-scrollbar-thumb:hover {
+    background: #A134BF; /* Color cuando está en hover */
+}
+
+
+.scroll-container {
+    position: relative;
+    width: 100%;
+    height: 300px; /* Ajusta la altura según tus necesidades */
+    overflow: hidden;
+}
+
+.scroll-up, .scroll-down {
+    background-color: #444;
+    color: white;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    padding: 10px;
+    text-align: center;
+    font-size: 18px;
+}
+
+.scroll-up:hover, .scroll-down:hover {
+    background-color: #666;
+}
+
+.content {
+    height: 100%;
+    overflow-y: auto;
+    scrollbar-width: thin; /* Firefox */
+}
+
+.content::-webkit-scrollbar {
+    width: 12px;
+}
+
+.content::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 10px;
+}
+
+
+
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      display: flex;
+      height: 100vh;
+    }
+
+    .header {
+      position: absolute;
+      top: 0;
+      width: 100%;
+      background-color: #333;
+      color: white;
+      text-align: center;
+      padding: 10px;
+      z-index: 1;
+    }
+
+    .sidebar {
+      width: 200px;
+      background-color: #555;
+      color: white;
+      text-align: center;
+      padding: 15px;
+      position: absolute;
+      top: 50px;
+      left: 0;
+      height: calc(100% - 50px);
+    }
+
+    .content {
+      flex-grow: 1;
+      margin-left: 200px;
+      padding: 20px;
+      background-color: #f4f4f4;
+    }
+
+    .imagen-desplazable {
+      width: 100%;
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      animation: bajar 2s ease-in-out 3s forwards;
+    }
+
+    @keyframes bajar {
+      0% {
+        top: 0;
+      }
+      100% {
+        top: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="header">Header</header>
+  <div class="sidebar">Sidebar</div>
+  <div class="scroll-container">
+    <button class="scroll-up">▲</button>
+    <div class="content">
+        <!-- Tu contenido va aquí -->
+    </div>
+    <button class="scroll-down">▼</button>
+</div>
+  <main class="content">
+    <img src="welcome_to_la_soleil.PNG" alt="Imagen" class="imagen-desplazable">
+  </main>
+</body>
+</html>

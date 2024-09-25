@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NEKOPARA</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playwrite+FR+Moderne:wght@100..400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Pinyon+Script&display=swap" rel="stylesheet">
+    <link rel="icon" href="resources/nekopara_inicio.png" type="image/png">
+    <link rel="stylesheet" href="design.css">
+    <style>
+
+        .main-content {
+            margin-left: 110px;
+            padding: 20px;
+            background-image: url('maple/maple_wallpaper.jpg');
+            background-size: cover;
+            background-attachment: auto;
+            height: 100%;
+            width: calc(100% - 110px);
+            overflow: auto;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+        }
+        section {
+            padding: 20px;
+            background-color: #F17A47cc;
+            margin-bottom: 20px;
+            border-radius: 8px;
+            text-align: center;
+            margin-left: 10%;
+            margin-right: 10%;
+        }
+        section#inicio {
+            padding: 20px;
+            background-color: #F17A47e6;
+            border-radius: 8px;
+            width: 80%;
+            height: auto;
+            position: relative;
+            overflow: visible;
+        }
+
+        
+
+        .footer-imgagen {
+            width: 32px; /* Ajusta el tamaño de la imagen */
+            height: 32px; /* Ajusta el tamaño de la imagen */
+
+        }
+
+        footer {
+            background-color: #000000;
+            color: #fff;
+            text-align: center;
+            padding: 1em 20px; /* Ajusta el padding vertical y el margen izquierdo/derecho */
+            margin-left: -20px; /* Ajusta el margen izquierdo igual al ancho de tu sidebar */
+            margin-right: -20px; /* Ajusta el margen derecho */
+            height: 100px;
+        }
+
+        .footer-top {
+            background-color: #1B0126;
+            color: #fff;
+            text-align: center;
+            padding: 1em 20px;
+            width: 100%;
+            bottom: 100px;
+            margin-left: -20px; /* Ajusta el margen izquierdo igual al ancho de tu sidebar */
+            margin-right: -20px; /* Ajusta el margen derecho */
+        }
+
+        .dropdown {
+        position: relative;
+        display: inline-block;
+        margin-top: 20px;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #F17A47e6;
+            box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+            padding: 15px;
+            border-radius: 8px;
+            z-index: 1;
+            width: 250px;
+            top: 40px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .dropdown-content a {
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #F17A47af;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        .dropdown-content:before {
+            content: '';
+            position: absolute;
+            top: -20px;
+            left: 50%;
+            margin-left: -10px;
+            border: 10px solid transparent;
+            border-bottom-color: #F17A47;
+        }
+
+        .dropdown-content:after {
+            content: '';
+            position: absolute;
+            top: -18px;
+            left: 50%;
+            margin-left: -8px;
+            border: 8px solid transparent;
+            border-bottom-color: #F17A47;
+        }
+
+        /* Estilos para menú desplegable anidado */
+        .nested-dropdown {
+            position: relative;
+        }
+
+        .nested-dropdown-content {
+            display: none;
+            position: absolute;
+            top: 0;
+            left: 100%;
+            background-color: #F17A47;
+            min-width: 175px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+        }
+
+        .nested-dropdown:hover .nested-dropdown-content {
+            display: block;
+        }
+
+        .nested-dropdown-content a {
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+
+        .nested-dropdown-content a:hover {
+            background-color: #F17A47;
+        }
+
+        .kappa {
+            font-size: 19px;
+        }
+
+        .lappa {
+            margin-left: 45px;
+        }
+
+        .lappa1 {
+            margin-left: 15px;
+        }
+
+        .lappa2 {
+            margin-left: 89px;
+        }
+    </style>
+</head>
+<body>
+    <img src="chocola/chocola_chibi.png" alt="Imagen pequeña chocola" class="overlay-image image1">
+    <img src="vanilla/vanilla_chibi.png" alt="Imagen pequeña vanilla" class="overlay-image image2">
+    <img src="coconut/coconut_chibi.png" alt="Imagen pequeña coconut" class="overlay-image image3">
+    <img src="azuki/azuki_chibi.png" alt="Imagen pequeña azuki" class="overlay-image image4">
+    <img src="maple/maple_chibi.png" alt="Imagen pequeña maple" class="overlay-image image5">
+    <img src="cinnamon/cinnamon_chibi.png" alt="Imagen pequeña cinnamon" class="overlay-image image6">
+    <div class="sidebar">
+        <a href="file:///C:/Users/PC/OneDrive/Escritorio/testing/index.html">
+            <img src="resources/nekopara_inicio.png" alt="Inicio" class="pointer">
+        </a>
+        <a href="file:///C:/Users/PC/OneDrive/Escritorio/testing/chocola_page.html" class="chocola_color">
+            <img src="chocola/chocola_icon.png" alt="imagen1" class="pointer">
+        </a>
+        <a href="file:///C:/Users/PC/OneDrive/Escritorio/testing/vanilla_page.html" class="vanilla_color">
+            <img src="vanilla/vanilla_icon.png" alt="Nosotros" class="pointer">
+        </a>
+        <a href="file:///C:/Users/PC/OneDrive/Escritorio/testing/coconut_page.html" class="coconut_color">
+            <img src="coconut/coconut_icon.png" alt="Servicios" class="pointer">
+        </a>
+        <a href="file:///C:/Users/PC/OneDrive/Escritorio/testing/azuki_page.html" class="azuki_color">
+            <img src="azuki/azuki_icon.png" alt="Nosotros" class="pointer">
+        </a>
+        <a href="file:///C:/Users/PC/OneDrive/Escritorio/testing/maple_page.html" class="maple_color">
+            <img src="maple/maple_icon.png" alt="Servicios" class="pointer">
+        </a>
+        <a href="file:///C:/Users/PC/OneDrive/Escritorio/testing/cinnamon_page.html" class="cinnamon_color">
+            <img src="cinnamon/cinnamon_icon.png" alt="Nosotros" class="pointer">
+        </a> 
+    </div>
+    <div class="main-content">
+        <br><br/>
+        <br><br/>
+        <br><br/>
+        <br><br/>
+        <br><br/>
+        <br><br/>
+        <br><br/>
+        <br><br/>
+        <br><br/>
+        <br><br/>
+        <br><br/>
+        <br><br/>
+        <br><br/>
+        <br><br/>
+        <br><br/>
+        <br><br/>
+        <br><br/>
+        <br><br/>
+        <br><br/>
+        <br><br/>
+        <br><br/>
+        <br><br/>
+        <h1 style="margin-left: 10%;">
+            <a href="file:///C:/Users/PC/OneDrive/Escritorio/testing/index.html" style="text-decoration: none; color: inherit;">
+                <img src="resources/nekopara_title.png" alt="Icono" style="vertical-align: middle; margin-right: 5px; width: 300px; height: 110px;" class="pointer">
+            </a>
+            <a href="file:///C:/Users/PC/OneDrive/Escritorio/testing/maple_page.html" style="text-decoration: none; color: inherit;" onmouseover="this.style.textDecoration='underline'; this.style.color='#F17A47';" onmouseout="this.style.textDecoration='none'; this.style.color='inherit';" class="pointer lappa1">
+                Welcome!
+            </a>
+            <div class="dropdown">
+            <span style="text-decoration: none; color: inherit;" onmouseover="this.style.textDecoration='underline'; this.style.color='black';" onmouseout="this.style.textDecoration='none'; this.style.color='inherit';" class="pointer lappa1">Nekopara</span>
+    <div class="dropdown-content">
+        <div class="nested-dropdown">
+            <a href="#" class="pointer kappa">Novelas Visuales <span class="lappa kappa">></span></a>
+        <div class="nested-dropdown-content">
+            <a href="https://store.steampowered.com/app/899970/NEKOPARA_Extra/?l=spanish" class="pointer kappa">Nekopara Extra</a>
+            <a href="https://store.steampowered.com/app/385800/NEKOPARA_Vol_0/?l=spanish" class="pointer kappa">Nekopara Vol 0</a>
+            <a href="https://store.steampowered.com/app/333600/NEKOPARA_Vol_1/?l=spanish" class="pointer kappa">Nekopara Vol 1</a>
+            <a href="https://store.steampowered.com/app/420110/NEKOPARA_Vol_2/?l=spanish" class="pointer kappa">Nekopara Vol 2</a>
+            <a href="https://store.steampowered.com/app/602520/NEKOPARA_Vol_3/?l=spanish" class="pointer kappa">Nekopara Vol 3</a>
+            <a href="https://store.steampowered.com/app/1406990/NEKOPARA_Vol_4/?l=spanish" class="pointer kappa">Nekopara Vol 4</a>
+        </div>
+        </div>
+        <div class="nested-dropdown">
+            <a href="#" class="pointer kappa">Otros juegos<span class="lappa2 kappa">></span></a>
+        <div class="nested-dropdown-content">
+            <a href="https://store.steampowered.com/app/469990/NEKOPALIVE/" class="pointer kappa">Nekopara LIVE</a>
+            <a href="https://x.com/nekoparaiten_en" class="pointer kappa">Nekoparaiten</a>
+            <a href="https://store.steampowered.com/app/1593310/NEKOPARA__Catboys_Paradise/?l=spanish" class="pointer kappa">Nekopara-Catboy's Paradise</a>
+            <a href="https://nekopara.fandom.com/wiki/Inupara" class="pointer kappa">Inupara-Dog'Paradise</a>
+        </div>
+        </div>
+        <a href="https://es.novelcool.com/chapter/Cap-tulo-1/3172887/" class="pointer kappa">Nekopara Manga</a>
+        <a href="https://www.crunchyroll.com/es/series/GVDHX8J8Z/nekopara" class="pointer kappa">Nekopara Anime</a>
+    </div>
+    </div>
+    <div class="dropdown">
+    <span style="text-decoration: none; color: inherit;" onmouseover="this.style.textDecoration='underline'; this.style.color='black';" onmouseout="this.style.textDecoration='none'; this.style.color='inherit';" class="pointer lappa1">Personajes</span>
+    <div class="dropdown-content">
+        <div class="nested-dropdown">
+            <a href="#" class="pointer kappa">Kashou Minaduki</a>
+            <a href="#" class="pointer kappa">Shigure Minaduki</a>
+            <a href="#" class="pointer kappa">Milk</a>
+            <a href="#" class="pointer kappa">Fraise</a>
+        </div>  
+    </div>
+    </div>
+    <div class="dropdown">
+        <span style="text-decoration: none; color: inherit;" onmouseover="this.style.textDecoration='underline'; this.style.color='black';" onmouseout="this.style.textDecoration='none'; this.style.color='inherit';" class="pointer lappa1">Media</span>
+        <div class="dropdown-content">
+            <div class="nested-dropdown">
+                <a href="https://www.youtube.com/watch?v=bVtSUIiawEs&ab_channel=VNlover" class="pointer kappa">Taiyou Paradise</a>
+                <a href="https://www.youtube.com/watch?v=3JAiQV32QYI&ab_channel=%E3%81%B2%E3%81%A4%E3%81%8D%5B%E7%B7%8B%E6%9C%88%5D " class="pointer kappa">Nekomanma biyori</a>
+                <a href="https://www.youtube.com/watch?v=SA4t-uiccCA&ab_channel=NEKOWORKsOfficial" class="pointer kappa">Doki doki kokoro flavour</a>
+                <a href="https://www.youtube.com/watch?v=w-jJYvWhkLg&ab_channel=Az" class="pointer kappa">Shimai Neko no Shukure</a>
+                <a href="https://www.youtube.com/watch?v=JXDSxL2aRWM&ab_channel=NEKOWORKsOfficial" class="pointer kappa">Nekoichi</a>
+                <a href="https://www.youtube.com/watch?v=eqWOJY2ORlo&ab_channel=Duca-Topic" class="pointer kappa">Growing</a>
+                <a href="https://www.youtube.com/watch?v=Ca_MsvoimGk&ab_channel=NEKOWORKsOfficial" class="pointer kappa">Sweetxsweet</a>
+                <a href="https://www.youtube.com/watch?v=3_yDZjk3ucY&ab_channel=n0miya" class="pointer kappa">Koisuru flavour</a>
+                <a href="https://www.youtube.com/watch?v=dflERjiF1dM&ab_channel=%D0%92%D0%BB%D0%B0%D0%B4%D0%B8%D0%BC%D0%B8%D1%80%D0%9A%D0%BE%D1%87%D0%B5%D1%80%D0%B3%D0%B8%D0%BD" class="pointer kappa">Tokimeki☆Emotion</a>
+                <a href="https://www.youtube.com/watch?v=FczpYpidKDk&ab_channel=Maychantz" class="pointer kappa">My dearest</a>
+                <a href="https://www.youtube.com/watch?v=PMPrVvdctOI&ab_channel=NEKOWORKsOfficial" class="pointer kappa">Shymphony</a>
+                <a href="https://www.youtube.com/watch?v=i80OHgDwfZI&ab_channel=NEKOWORKsOfficial" class="pointer kappa">Ino no outa    </a>
+            </div>  
+        </div>
+        </div>
+        </h1>    
+        <section id="inicio">
+            <h2 class=pinyon-script>~ Welcome to Maple Page~</h2>
+            <div class="slideshow-container">
+                <img class="slide active" src="maple/maple_img_1.jpg" alt="Imagen 1">
+                <img class="slide" src="maple/maple_img_2.jpg" alt="Imagen 2">
+                <img class="slide" src="maple/maple_img_3.png" alt="Imagen 3">
+                <img class="slide" src="maple/maple_img_4.png" alt="Imagen 4">
+                <!-- Botones de navegación -->
+                <a class="prev" onclick="changeSlide(-1)" onmouseover="showControls()">&#10094;</a>
+                <a class="next" onclick="changeSlide(1)" onmouseover="showControls()">&#10095;</a>
+                <!-- Barra de miniaturas -->
+                <div class="thumbnail-bar" onmouseover="showControls()">
+                    <img class="thumbnail" src="maple/maple_img_1.jpg" onclick="currentSlide(0)">
+                    <img class="thumbnail" src="maple/maple_img_2.jpg" onclick="currentSlide(1)">
+                    <img class="thumbnail" src="maple/maple_img_3.png" onclick="currentSlide(2)">
+                    <img class="thumbnail" src="maple/maple_img_4.png" onclick="currentSlide(3)">
+                </div>
+            </div>
+            <p class="texto-personalizado">
+                Maple (メイプル Meipuru) es una gata orgullosa, de pensamiento rápido y a menudo arrogante. Ama los productos de marca más recientes y ronronea solo cuando quiere algo de Shigure. Suele hablar francamente, pero sigue siendo atenta con quienes la rodean. Es, como dice el refrán, una gata miedosa, siempre encendiendo todas las luces camino al baño/caja de arena por la noche. De todas las gatas, su lengua es la más sensible a las cosas calientes.
+                </section>
+                <footer class="footer-top">
+                    <p>FOLLOW</p>
+                    <a href="https://www.facebook.com/nekoworks.tw/" class="pointer">
+                        <img src="resources/facebook_icon.png" alt="facebook" class="footer-imgagen">
+                    </a>
+                    <a href="https://www.youtube.com/user/nekoworksofficial" class="pointer">
+                        <img src="resources/youtube_icon.png" alt="facebook" class="footer-imgagen">
+                    </a>
+                    <a href="https://x.com/nekopara_pr" class="pointer">
+                        <img src="resources/twitter_icon.png" alt="twitter" class="footer-imgagen">
+                    </a>
+                </footer>
+    
+                <footer class="footer">
+                    <p>見てくれてありがとう</p>
+                </footer>
+    </div>
+    <script>
+        var slideIndex = 0;
+        var slides = document.getElementsByClassName("slide");
+        var slideInterval = setInterval(showSlides, 4000);
+
+        function showSlides() {
+            changeSlide(1);
+        }
+
+        function changeSlide(n) {
+            clearInterval(slideInterval); // Detiene el cambio automático de las imágenes
+            var currentSlide = slideIndex;
+            var newSlide = (slideIndex + n + slides.length) % slides.length; // Calcula el nuevo índice asegurando que esté en el rango correcto
+
+            if (n > 0) {
+                slides[currentSlide].classList.add("exit-left");
+                slides[newSlide].classList.add("enter-right");
+            } else {
+                slides[currentSlide].classList.add("exit-right");
+                slides[newSlide].classList.add("enter-left");
+            }
+
+            slides[currentSlide].classList.remove("active");
+            slides[newSlide].classList.add("active");
+
+            setTimeout(function() {
+                slides[currentSlide].classList.remove("exit-left", "exit-right");
+                slides[newSlide].classList.remove("enter-left", "enter-right");
+            }, 500); // Ajusta este valor según la duración de tu animación CSS
+
+            slideIndex = newSlide;
+            slideInterval = setInterval(showSlides, 4000); // Reinicia el cambio automático de las imágenes
+        }
+
+        function currentSlide(n) {
+            changeSlide(n - slideIndex); // Calcula el desplazamiento necesario
+        }
+
+    </script>
+</body>
+</html>
