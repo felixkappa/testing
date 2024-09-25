@@ -1,0 +1,45 @@
+﻿[Arrow]
+Path=Nekopara Normal Select.cur
+
+[AppStarting]
+Path=Nekopara Working in Background.cur
+
+[Help]
+Path=Nekopara Help.cur
+
+[Crosshair]
+Path=Nekopara Precision Select.cur
+
+[IBeam]
+Path=Nekopara Text Select.cur
+
+[NWPen]
+Path=Nekopara Handwriting.cur
+
+[No]
+Path=Nekopara Unavailable.cur
+
+[SizeNS]
+Path=Nekopara Vertical Resize.cur
+
+[SizeWE]
+Path=Nekopara Horizontal Resize.cur
+
+[SizeNWSE]
+Path=Nekopara Diagonal Resize.cur
+
+[SizeNESW]
+Path=Nekopara Diagonal Resize 2.cur
+
+[SizeAll]
+Path=Nekopara Move.cur
+
+[Hand]
+Path=Nekopara Link Select.cur
+
+[UpArrow]
+Path=Nekopara Alternate Select.cur
+
+[Wait]
+Path=Nekopara Busy.cur
+
