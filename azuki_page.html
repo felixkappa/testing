@@ -46,9 +46,9 @@
             background-color: #000000;
             color: #fff;
             text-align: center;
-            padding: 1em 20px; /* Ajusta el padding vertical y el margen izquierdo/derecho */
-            margin-left: -20px; /* Ajusta el margen izquierdo igual al ancho de tu sidebar */
-            margin-right: -20px; /* Ajusta el margen derecho */
+            padding: 1em 20px; 
+            margin-left: -20px; 
+            margin-right: -20px;
             height: 100px;
         }
 
@@ -59,8 +59,8 @@
             padding: 1em 20px;
             width: 100%;
             bottom: 100px;
-            margin-left: -20px; /* Ajusta el margen izquierdo igual al ancho de tu sidebar */
-            margin-right: -20px; /* Ajusta el margen derecho */
+            margin-left: -20px; 
+            margin-right: -20px;
         }
 
         .dropdown {
@@ -118,7 +118,7 @@
             border-bottom-color: #F2D06B;
         }
 
-        /* Estilos para menú desplegable anidado */
+
         .nested-dropdown {
             position: relative;
         }
@@ -332,9 +332,9 @@
         }
 
         function changeSlide(n) {
-            clearInterval(slideInterval); // Detiene el cambio automático de las imágenes
+            clearInterval(slideInterval); 
             var currentSlide = slideIndex;
-            var newSlide = (slideIndex + n + slides.length) % slides.length; // Calcula el nuevo índice asegurando que esté en el rango correcto
+            var newSlide = (slideIndex + n + slides.length) % slides.length; 
 
             if (n > 0) {
                 slides[currentSlide].classList.add("exit-left");
@@ -350,16 +350,17 @@
             setTimeout(function() {
                 slides[currentSlide].classList.remove("exit-left", "exit-right");
                 slides[newSlide].classList.remove("enter-left", "enter-right");
-            }, 500); // Ajusta este valor según la duración de tu animación CSS
+            }, 500); 
 
             slideIndex = newSlide;
-            slideInterval = setInterval(showSlides, 4000); // Reinicia el cambio automático de las imágenes
+            slideInterval = setInterval(showSlides, 4000);
         }
 
         function currentSlide(n) {
-            changeSlide(n - slideIndex); // Calcula el desplazamiento necesario
+            changeSlide(n - slideIndex); 
         }
 
     </script>
 </body>
 </html>
+
