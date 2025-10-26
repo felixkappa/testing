@@ -67,27 +67,27 @@
         }
 
         .sidebar .chocola_color:hover {
-            background-color: #FA83AF   ; /* Cambiar color de fondo para imagen 1 */
+            background-color: #FA83AF   ;
         }
 
         .sidebar .vanilla_color:hover {
-            background-color: #A4E7F9   ; /* Cambiar color de fondo para imagen 1 */
+            background-color: #A4E7F9   ;
         }
 
         .sidebar .coconut_color:hover {
-            background-color: #A134BF   ; /* Cambiar color de fondo para imagen 1 */
+            background-color: #A134BF   ;
         }
 
         .sidebar .azuki_color:hover {   
-            background-color: #F2D06B   ; /* Cambiar color de fondo para imagen 1 */
+            background-color: #F2D06B   ;
         }
 
         .sidebar .maple_color:hover {
-            background-color: #F17A47   ; /* Cambiar color de fondo para imagen 1 */
+            background-color: #F17A47   ;
         }
 
         .sidebar .cinnamon_color:hover {
-            background-color: #ADEA98   ; /* Cambiar color de fondo para imagen 1 */
+            background-color: #ADEA98   ;
         }
 
         .main-content {
@@ -129,7 +129,7 @@
             justify-content: center;
             align-items: center;
             overflow: hidden;
-            margin: 0 auto; /* Centra el contenedor */
+            margin: 0 auto;
         }
 
         .slide {
@@ -157,10 +157,9 @@
 
 
         .prev, .next, .thumbnail-bar {
-        display: none; /* Oculta inicialmente las flechas y la barra de miniaturas */
+        display: none;
         }
 
-        /* Mostrar cuando se pase el cursor sobre las imágenes */
         .slideshow-container:hover .prev,
         .slideshow-container:hover .next,
          .slideshow-container:hover .thumbnail-bar {
@@ -199,14 +198,14 @@
             position: absolute;
             bottom: 0;
             width: 100%;
-            background-color: rgba(0, 0, 0, 0.5); /* Fondo negro translúcido */
+            background-color: rgba(0, 0, 0, 0.5); 
             text-align: center;
             padding: 10px 0;
             z-index: 10;
         }
 
         .thumbnail {
-            width: 70px; /* Ajusta el tamaño según tus necesidades */
+            width: 70px; 
             height: auto;
             margin: 0 5px;
             cursor: url('resources/nekopara_cursor_pointer.cur'), pointer;
@@ -228,43 +227,43 @@
         }
 
         .overlay-image {
-            position: absolute; /* Posicionamiento absoluto dentro de .main-content */
-            width: 150px; /* Ajusta el tamaño de la imagen */
-            height: 150px; /* Ajusta el tamaño de la imagen */
+            position: absolute;
+            width: 150px; 
+            height: 150px;
         }
 
         .image1 {
-            bottom: 1px; /* Ajusta la posición vertical */
-            right: 20px; /* Ajusta la posición horizontal */
+            bottom: 1px; 
+            right: 20px; 
         }
 
         .image2 {
-            bottom: 1px; /* Ajusta la posición vertical */
-            left: 110px; /* Ajusta la posición horizontal */
+            bottom: 1px; 
+            left: 110px; 
         }
 
         .image3 {
-            bottom: 400px; /* Ajusta la posición vertical */
-            left: 110px; /* Ajusta la posición horizontal */
+            bottom: 400px; 
+            left: 110px; 
         }
 
         .image4 {
-            bottom: 200px; /* Ajusta la posición vertical */
-            left: 110px; /* Ajusta la posición horizontal */
+            bottom: 200px; 
+            left: 110px; 
         }
 
         .image5 {
-            bottom: 400px; /* Ajusta la posición vertical */
-            right: 20px; /* Ajusta la posición horizontal */
+            bottom: 400px; 
+            right: 20px; 
         }
         .image6 {
-            bottom: 200px; /* Ajusta la posición vertical */
-            right: 20px; /* Ajusta la posición horizontal */
+            bottom: 200px; 
+            right: 20px; 
         }
 
         .footer-imgagen {
-            width: 32px; /* Ajusta el tamaño de la imagen */
-            height: 32px; /* Ajusta el tamaño de la imagen */
+            width: 32px; 
+            height: 32px; 
 
         }
 
@@ -272,9 +271,9 @@
             background-color: #000000;
             color: #fff;
             text-align: center;
-            padding: 1em 20px; /* Ajusta el padding vertical y el margen izquierdo/derecho */
-            margin-left: -20px; /* Ajusta el margen izquierdo igual al ancho de tu sidebar */
-            margin-right: -20px; /* Ajusta el margen derecho */
+            padding: 1em 20px; 
+            margin-left: -20px; 
+            margin-right: -20px; 
             height: 100px;
         }
 
@@ -285,8 +284,8 @@
             padding: 1em 20px;
             width: 100%;
             bottom: 100px;
-            margin-left: -20px; /* Ajusta el margen izquierdo igual al ancho de tu sidebar */
-            margin-right: -20px; /* Ajusta el margen derecho */
+            margin-left: -20px; 
+            margin-right: -20px; 
         }
 
         .dropdown {
@@ -344,7 +343,7 @@
             border-bottom-color: #fbe7b5e6;
         }
 
-        /* Estilos para menú desplegable anidado */
+       
         .nested-dropdown {
             position: relative;
         }
@@ -589,9 +588,9 @@
         }
 
         function changeSlide(n) {
-            clearInterval(slideInterval); // Detiene el cambio automático de las imágenes
+            clearInterval(slideInterval); 
             var currentSlide = slideIndex;
-            var newSlide = (slideIndex + n + slides.length) % slides.length; // Calcula el nuevo índice asegurando que esté en el rango correcto
+            var newSlide = (slideIndex + n + slides.length) % slides.length; 
 
             if (n > 0) {
                 slides[currentSlide].classList.add("exit-left");
@@ -607,16 +606,17 @@
             setTimeout(function() {
                 slides[currentSlide].classList.remove("exit-left", "exit-right");
                 slides[newSlide].classList.remove("enter-left", "enter-right");
-            }, 500); // Ajusta este valor según la duración de tu animación CSS
+            }, 500); 
 
             slideIndex = newSlide;
-            slideInterval = setInterval(showSlides, 4000); // Reinicia el cambio automático de las imágenes
+            slideInterval = setInterval(showSlides, 4000); 
         }
 
         function currentSlide(n) {
-            changeSlide(n - slideIndex); // Calcula el desplazamiento necesario
+            changeSlide(n - slideIndex); 
         }
 
     </script>
 </body>
+
 </html>
